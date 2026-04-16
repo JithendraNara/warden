@@ -12,3 +12,4 @@ build/
 .envrc
 .DS_Store
 *.sqlite3
+.claude-flow/
