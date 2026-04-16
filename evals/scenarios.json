@@ -1,0 +1,136 @@
+[
+  {
+    "id": "triage-bug-crash-on-startup",
+    "workflow": "triage",
+    "inputs": {
+      "repo": "example/demo",
+      "issue": 42,
+      "issue_title": "App crashes on startup when config file is missing",
+      "issue_body": "Steps to reproduce: run ./app with no config.yaml present. Expected: helpful error. Actual: segfault."
+    },
+    "expected": {
+      "subagent": "triage-agent",
+      "requires_approval": false,
+      "output_keys": [
+        "category",
+        "severity",
+        "priority",
+        "summary",
+        "recommended_labels",
+        "suggested_next_action"
+      ]
+    }
+  },
+  {
+    "id": "coding-risky-patch",
+    "workflow": "coding",
+    "inputs": {
+      "repo": "example/demo",
+      "issue": 99,
+      "description": "Proposed patch writes to production config."
+    },
+    "expected": {
+      "subagent": "coder-agent",
+      "requires_approval": true,
+      "output_keys": ["affected_files", "diff", "rationale", "safety_notes"]
+    }
+  },
+  {
+    "id": "release-notes-from-commits",
+    "workflow": "release",
+    "inputs": {
+      "repo": "example/demo",
+      "from_ref": "v0.1.0",
+      "to_ref": "v0.2.0",
+      "commit_summaries": [
+        "fix: handle missing config without crashing",
+        "feat: add --dry-run flag",
+        "chore: bump dependencies"
+      ]
+    },
+    "expected": {
+      "subagent": "scribe-agent",
+      "requires_approval": false,
+      "output_keys": ["Highlights", "Breaking Changes", "Fixes", "Internal"]
+    }
+  },
+  {
+    "id": "agentic-triage-crash-on-startup",
+    "workflow": "agentic_triage",
+    "inputs": {
+      "repo": "example/demo",
+      "issue": 42,
+      "issue_title": "App crashes on startup when config file is missing",
+      "issue_body": "Steps: run ./app with no config.yaml present. Actual: the binary crashes with a segfault."
+    },
+    "expected": {
+      "subagent": "triage-agent",
+      "requires_approval": false,
+      "min_tool_calls": 1,
+      "require_verified": true,
+      "output_keys": [
+        "category",
+        "severity",
+        "priority",
+        "summary",
+        "recommended_labels",
+        "suggested_next_action"
+      ]
+    }
+  },
+  {
+    "id": "agentic-investigation-config-missing",
+    "workflow": "agentic_investigation",
+    "inputs": {
+      "issue_title": "Config file missing at startup",
+      "issue_body": "When config.yaml is missing the app crashes with a traceback instead of a helpful message.",
+      "files": {
+        "src/main.py": "def load_config():\n    return open('config.yaml').read()\n"
+      }
+    },
+    "expected": {
+      "subagent": "investigator-agent",
+      "requires_approval": true,
+      "min_tool_calls": 2,
+      "require_verified": true,
+      "output_keys": ["reproduced", "steps", "evidence", "hypotheses"]
+    }
+  },
+  {
+    "id": "agentic-coding-patch-proposal",
+    "workflow": "agentic_coding",
+    "inputs": {
+      "target_file": "main.py",
+      "goal": "Annotate missing guard with a TODO note.",
+      "evidence": "Users report an unhandled exception when the config file is missing on startup.",
+      "files": {
+        "main.py": "# existing first line\n"
+      }
+    },
+    "expected": {
+      "subagent": "coder-agent",
+      "requires_approval": true,
+      "min_tool_calls": 2,
+      "require_verified": true,
+      "output_keys": ["affected_files", "diff", "rationale", "tests_to_add", "safety_notes"]
+    }
+  },
+  {
+    "id": "agentic-review-startup-fix",
+    "workflow": "agentic_review",
+    "inputs": {
+      "repo": "example/demo",
+      "pr": 7,
+      "pr_title": "Fix startup crash",
+      "pr_body": "Adds a guard for missing config.",
+      "diff": "--- a/src/main.py\n+++ b/src/main.py\n@@ -1,2 +1,3 @@\n+# guard missing config\n def main():\n     print('hello')\n"
+    },
+    "expected": {
+      "subagent": "reviewer-agent",
+      "requires_approval": false,
+      "min_tool_calls": 2,
+      "require_verified": true,
+      "output_keys": ["verdict", "feedback", "blocking_issues", "pr_summary"]
+    }
+  }
+]
