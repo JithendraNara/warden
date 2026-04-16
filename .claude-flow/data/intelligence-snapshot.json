@@ -1,0 +1,1010 @@
+[
+  {
+    "timestamp": 1776362958406,
+    "nodes": 15,
+    "edges": 12,
+    "pageRankSum": 0.9999999999999999,
+    "confidences": [
+      0.5,
+      0.5,
+      0.5,
+      0.5,
+      0.5,
+      0.5,
+      0.5,
+      0.5,
+      0.5,
+      0.5,
+      0.5,
+      0.5,
+      0.5,
+      0.5,
+      0.5
+    ],
+    "accessCounts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "topPatterns": [
+      {
+        "id": "mem-openclaw-details-troubleshooting-checklist",
+        "summary": "Troubleshooting Checklist",
+        "confidence": 0.5,
+        "pageRank": 0.11195970064663599,
+        "accessCount": 0
+      },
+      {
+        "id": "mem-openclaw-details-infrastructure--docker-contain",
+        "summary": "Infrastructure (Docker containers on Linux)",
+        "confidence": 0.5,
+        "pageRank": 0.10455934529494776,
+        "accessCount": 0
+      },
+      {
+        "id": "mem-MEMORY-ssh-access",
+        "summary": "SSH Access",
+        "confidence": 0.5,
+        "pageRank": 0.0958531306540649,
+        "accessCount": 0
+      },
+      {
+        "id": "mem-openclaw-details-channels",
+        "summary": "Channels",
+        "confidence": 0.5,
+        "pageRank": 0.0958531306540649,
+        "accessCount": 0
+      },
+      {
+        "id": "mem-MEMORY-mission-control-dashboard",
+        "summary": "Mission Control Dashboard",
+        "confidence": 0.5,
+        "pageRank": 0.0856106494782414,
+        "accessCount": 0
+      },
+      {
+        "id": "mem-openclaw-details-cron-job-model-naming--critica",
+        "summary": "Cron Job Model Naming (CRITICAL)",
+        "confidence": 0.5,
+        "pageRank": 0.0856106494782414,
+        "accessCount": 0
+      },
+      {
+        "id": "mem-MEMORY-common-issues-found",
+        "summary": "Common Issues Found",
+        "confidence": 0.5,
+        "pageRank": 0.07356061137724787,
+        "accessCount": 0
+      },
+      {
+        "id": "mem-openclaw-details-tool-permission-groups",
+        "summary": "Tool Permission Groups",
+        "confidence": 0.5,
+        "pageRank": 0.07356061137724787,
+        "accessCount": 0
+      },
+      {
+        "id": "mem-MEMORY-agents",
+        "summary": "Agents",
+        "confidence": 0.5,
+        "pageRank": 0.05938407163463863,
+        "accessCount": 0
+      },
+      {
+        "id": "mem-openclaw-details-auth-providers-configured",
+        "summary": "Auth Providers Configured",
+        "confidence": 0.5,
+        "pageRank": 0.05938407163463863,
+        "accessCount": 0
+      }
+    ]
+  },
+  {
+    "timestamp": 1776362997209,
+    "nodes": 15,
+    "edges": 12,
+    "pageRankSum": 0.9999999999999999,
+    "confidences": [
+      0.5,
+      0.5,
+      0.5,
+      0.5,
+      0.5,
+      0.5,
+      0.5,
+      0.5,
+      0.5,
+      0.5,
+      0.5,
+      0.5,
+      0.5,
+      0.5,
+      0.5
+    ],
+    "accessCounts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "topPatterns": [
+      {
+        "id": "mem-openclaw-details-troubleshooting-checklist",
+        "summary": "Troubleshooting Checklist",
+        "confidence": 0.5,
+        "pageRank": 0.11195970064663599,
+        "accessCount": 0
+      },
+      {
+        "id": "mem-openclaw-details-infrastructure--docker-contain",
+        "summary": "Infrastructure (Docker containers on Linux)",
+        "confidence": 0.5,
+        "pageRank": 0.10455934529494776,
+        "accessCount": 0
+      },
+      {
+        "id": "mem-MEMORY-ssh-access",
+        "summary": "SSH Access",
+        "confidence": 0.5,
+        "pageRank": 0.0958531306540649,
+        "accessCount": 0
+      },
+      {
+        "id": "mem-openclaw-details-channels",
+        "summary": "Channels",
+        "confidence": 0.5,
+        "pageRank": 0.0958531306540649,
+        "accessCount": 0
+      },
+      {
+        "id": "mem-MEMORY-mission-control-dashboard",
+        "summary": "Mission Control Dashboard",
+        "confidence": 0.5,
+        "pageRank": 0.0856106494782414,
+        "accessCount": 0
+      },
+      {
+        "id": "mem-openclaw-details-cron-job-model-naming--critica",
+        "summary": "Cron Job Model Naming (CRITICAL)",
+        "confidence": 0.5,
+        "pageRank": 0.0856106494782414,
+        "accessCount": 0
+      },
+      {
+        "id": "mem-MEMORY-common-issues-found",
+        "summary": "Common Issues Found",
+        "confidence": 0.5,
+        "pageRank": 0.07356061137724787,
+        "accessCount": 0
+      },
+      {
+        "id": "mem-openclaw-details-tool-permission-groups",
+        "summary": "Tool Permission Groups",
+        "confidence": 0.5,
+        "pageRank": 0.07356061137724787,
+        "accessCount": 0
+      },
+      {
+        "id": "mem-MEMORY-agents",
+        "summary": "Agents",
+        "confidence": 0.5,
+        "pageRank": 0.05938407163463863,
+        "accessCount": 0
+      },
+      {
+        "id": "mem-openclaw-details-auth-providers-configured",
+        "summary": "Auth Providers Configured",
+        "confidence": 0.5,
+        "pageRank": 0.05938407163463863,
+        "accessCount": 0
+      }
+    ]
+  },
+  {
+    "timestamp": 1776363205235,
+    "nodes": 15,
+    "edges": 12,
+    "pageRankSum": 0.9999999999999999,
+    "confidences": [
+      0.5,
+      0.5,
+      0.5,
+      0.5,
+      0.5,
+      0.5,
+      0.5,
+      0.5,
+      0.5,
+      0.5,
+      0.5,
+      0.5,
+      0.5,
+      0.5,
+      0.5
+    ],
+    "accessCounts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "topPatterns": [
+      {
+        "id": "mem-openclaw-details-troubleshooting-checklist",
+        "summary": "Troubleshooting Checklist",
+        "confidence": 0.5,
+        "pageRank": 0.11195970064663599,
+        "accessCount": 0
+      },
+      {
+        "id": "mem-openclaw-details-infrastructure--docker-contain",
+        "summary": "Infrastructure (Docker containers on Linux)",
+        "confidence": 0.5,
+        "pageRank": 0.10455934529494776,
+        "accessCount": 0
+      },
+      {
+        "id": "mem-MEMORY-ssh-access",
+        "summary": "SSH Access",
+        "confidence": 0.5,
+        "pageRank": 0.0958531306540649,
+        "accessCount": 0
+      },
+      {
+        "id": "mem-openclaw-details-channels",
+        "summary": "Channels",
+        "confidence": 0.5,
+        "pageRank": 0.0958531306540649,
+        "accessCount": 0
+      },
+      {
+        "id": "mem-MEMORY-mission-control-dashboard",
+        "summary": "Mission Control Dashboard",
+        "confidence": 0.5,
+        "pageRank": 0.0856106494782414,
+        "accessCount": 0
+      },
+      {
+        "id": "mem-openclaw-details-cron-job-model-naming--critica",
+        "summary": "Cron Job Model Naming (CRITICAL)",
+        "confidence": 0.5,
+        "pageRank": 0.0856106494782414,
+        "accessCount": 0
+      },
+      {
+        "id": "mem-MEMORY-common-issues-found",
+        "summary": "Common Issues Found",
+        "confidence": 0.5,
+        "pageRank": 0.07356061137724787,
+        "accessCount": 0
+      },
+      {
+        "id": "mem-openclaw-details-tool-permission-groups",
+        "summary": "Tool Permission Groups",
+        "confidence": 0.5,
+        "pageRank": 0.07356061137724787,
+        "accessCount": 0
+      },
+      {
+        "id": "mem-MEMORY-agents",
+        "summary": "Agents",
+        "confidence": 0.5,
+        "pageRank": 0.05938407163463863,
+        "accessCount": 0
+      },
+      {
+        "id": "mem-openclaw-details-auth-providers-configured",
+        "summary": "Auth Providers Configured",
+        "confidence": 0.5,
+        "pageRank": 0.05938407163463863,
+        "accessCount": 0
+      }
+    ]
+  },
+  {
+    "timestamp": 1776363509695,
+    "nodes": 15,
+    "edges": 12,
+    "pageRankSum": 0.9999999999999999,
+    "confidences": [
+      0.5,
+      0.5,
+      0.5,
+      0.5,
+      0.5,
+      0.5,
+      0.5,
+      0.5,
+      0.5,
+      0.5,
+      0.5,
+      0.5,
+      0.5,
+      0.5,
+      0.5
+    ],
+    "accessCounts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "topPatterns": [
+      {
+        "id": "mem-openclaw-details-troubleshooting-checklist",
+        "summary": "Troubleshooting Checklist",
+        "confidence": 0.5,
+        "pageRank": 0.11195970064663599,
+        "accessCount": 0
+      },
+      {
+        "id": "mem-openclaw-details-infrastructure--docker-contain",
+        "summary": "Infrastructure (Docker containers on Linux)",
+        "confidence": 0.5,
+        "pageRank": 0.10455934529494776,
+        "accessCount": 0
+      },
+      {
+        "id": "mem-MEMORY-ssh-access",
+        "summary": "SSH Access",
+        "confidence": 0.5,
+        "pageRank": 0.0958531306540649,
+        "accessCount": 0
+      },
+      {
+        "id": "mem-openclaw-details-channels",
+        "summary": "Channels",
+        "confidence": 0.5,
+        "pageRank": 0.0958531306540649,
+        "accessCount": 0
+      },
+      {
+        "id": "mem-MEMORY-mission-control-dashboard",
+        "summary": "Mission Control Dashboard",
+        "confidence": 0.5,
+        "pageRank": 0.0856106494782414,
+        "accessCount": 0
+      },
+      {
+        "id": "mem-openclaw-details-cron-job-model-naming--critica",
+        "summary": "Cron Job Model Naming (CRITICAL)",
+        "confidence": 0.5,
+        "pageRank": 0.0856106494782414,
+        "accessCount": 0
+      },
+      {
+        "id": "mem-MEMORY-common-issues-found",
+        "summary": "Common Issues Found",
+        "confidence": 0.5,
+        "pageRank": 0.07356061137724787,
+        "accessCount": 0
+      },
+      {
+        "id": "mem-openclaw-details-tool-permission-groups",
+        "summary": "Tool Permission Groups",
+        "confidence": 0.5,
+        "pageRank": 0.07356061137724787,
+        "accessCount": 0
+      },
+      {
+        "id": "mem-MEMORY-agents",
+        "summary": "Agents",
+        "confidence": 0.5,
+        "pageRank": 0.05938407163463863,
+        "accessCount": 0
+      },
+      {
+        "id": "mem-openclaw-details-auth-providers-configured",
+        "summary": "Auth Providers Configured",
+        "confidence": 0.5,
+        "pageRank": 0.05938407163463863,
+        "accessCount": 0
+      }
+    ]
+  },
+  {
+    "timestamp": 1776363556577,
+    "nodes": 15,
+    "edges": 12,
+    "pageRankSum": 0.9999999999999999,
+    "confidences": [
+      0.5,
+      0.5,
+      0.5,
+      0.5,
+      0.5,
+      0.5,
+      0.5,
+      0.5,
+      0.5,
+      0.5,
+      0.5,
+      0.5,
+      0.5,
+      0.5,
+      0.5
+    ],
+    "accessCounts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "topPatterns": [
+      {
+        "id": "mem-openclaw-details-troubleshooting-checklist",
+        "summary": "Troubleshooting Checklist",
+        "confidence": 0.5,
+        "pageRank": 0.11195970064663599,
+        "accessCount": 0
+      },
+      {
+        "id": "mem-openclaw-details-infrastructure--docker-contain",
+        "summary": "Infrastructure (Docker containers on Linux)",
+        "confidence": 0.5,
+        "pageRank": 0.10455934529494776,
+        "accessCount": 0
+      },
+      {
+        "id": "mem-MEMORY-ssh-access",
+        "summary": "SSH Access",
+        "confidence": 0.5,
+        "pageRank": 0.0958531306540649,
+        "accessCount": 0
+      },
+      {
+        "id": "mem-openclaw-details-channels",
+        "summary": "Channels",
+        "confidence": 0.5,
+        "pageRank": 0.0958531306540649,
+        "accessCount": 0
+      },
+      {
+        "id": "mem-MEMORY-mission-control-dashboard",
+        "summary": "Mission Control Dashboard",
+        "confidence": 0.5,
+        "pageRank": 0.0856106494782414,
+        "accessCount": 0
+      },
+      {
+        "id": "mem-openclaw-details-cron-job-model-naming--critica",
+        "summary": "Cron Job Model Naming (CRITICAL)",
+        "confidence": 0.5,
+        "pageRank": 0.0856106494782414,
+        "accessCount": 0
+      },
+      {
+        "id": "mem-MEMORY-common-issues-found",
+        "summary": "Common Issues Found",
+        "confidence": 0.5,
+        "pageRank": 0.07356061137724787,
+        "accessCount": 0
+      },
+      {
+        "id": "mem-openclaw-details-tool-permission-groups",
+        "summary": "Tool Permission Groups",
+        "confidence": 0.5,
+        "pageRank": 0.07356061137724787,
+        "accessCount": 0
+      },
+      {
+        "id": "mem-MEMORY-agents",
+        "summary": "Agents",
+        "confidence": 0.5,
+        "pageRank": 0.05938407163463863,
+        "accessCount": 0
+      },
+      {
+        "id": "mem-openclaw-details-auth-providers-configured",
+        "summary": "Auth Providers Configured",
+        "confidence": 0.5,
+        "pageRank": 0.05938407163463863,
+        "accessCount": 0
+      }
+    ]
+  },
+  {
+    "timestamp": 1776363564455,
+    "nodes": 15,
+    "edges": 12,
+    "pageRankSum": 0.9999999999999999,
+    "confidences": [
+      0.5,
+      0.5,
+      0.5,
+      0.5,
+      0.5,
+      0.5,
+      0.5,
+      0.5,
+      0.5,
+      0.5,
+      0.5,
+      0.5,
+      0.5,
+      0.5,
+      0.5
+    ],
+    "accessCounts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "topPatterns": [
+      {
+        "id": "mem-openclaw-details-troubleshooting-checklist",
+        "summary": "Troubleshooting Checklist",
+        "confidence": 0.5,
+        "pageRank": 0.11195970064663599,
+        "accessCount": 0
+      },
+      {
+        "id": "mem-openclaw-details-infrastructure--docker-contain",
+        "summary": "Infrastructure (Docker containers on Linux)",
+        "confidence": 0.5,
+        "pageRank": 0.10455934529494776,
+        "accessCount": 0
+      },
+      {
+        "id": "mem-MEMORY-ssh-access",
+        "summary": "SSH Access",
+        "confidence": 0.5,
+        "pageRank": 0.0958531306540649,
+        "accessCount": 0
+      },
+      {
+        "id": "mem-openclaw-details-channels",
+        "summary": "Channels",
+        "confidence": 0.5,
+        "pageRank": 0.0958531306540649,
+        "accessCount": 0
+      },
+      {
+        "id": "mem-MEMORY-mission-control-dashboard",
+        "summary": "Mission Control Dashboard",
+        "confidence": 0.5,
+        "pageRank": 0.0856106494782414,
+        "accessCount": 0
+      },
+      {
+        "id": "mem-openclaw-details-cron-job-model-naming--critica",
+        "summary": "Cron Job Model Naming (CRITICAL)",
+        "confidence": 0.5,
+        "pageRank": 0.0856106494782414,
+        "accessCount": 0
+      },
+      {
+        "id": "mem-MEMORY-common-issues-found",
+        "summary": "Common Issues Found",
+        "confidence": 0.5,
+        "pageRank": 0.07356061137724787,
+        "accessCount": 0
+      },
+      {
+        "id": "mem-openclaw-details-tool-permission-groups",
+        "summary": "Tool Permission Groups",
+        "confidence": 0.5,
+        "pageRank": 0.07356061137724787,
+        "accessCount": 0
+      },
+      {
+        "id": "mem-MEMORY-agents",
+        "summary": "Agents",
+        "confidence": 0.5,
+        "pageRank": 0.05938407163463863,
+        "accessCount": 0
+      },
+      {
+        "id": "mem-openclaw-details-auth-providers-configured",
+        "summary": "Auth Providers Configured",
+        "confidence": 0.5,
+        "pageRank": 0.05938407163463863,
+        "accessCount": 0
+      }
+    ]
+  },
+  {
+    "timestamp": 1776363574986,
+    "nodes": 15,
+    "edges": 12,
+    "pageRankSum": 0.9999999999999999,
+    "confidences": [
+      0.5,
+      0.5,
+      0.5,
+      0.5,
+      0.5,
+      0.5,
+      0.5,
+      0.5,
+      0.5,
+      0.5,
+      0.5,
+      0.5,
+      0.5,
+      0.5,
+      0.5
+    ],
+    "accessCounts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "topPatterns": [
+      {
+        "id": "mem-openclaw-details-troubleshooting-checklist",
+        "summary": "Troubleshooting Checklist",
+        "confidence": 0.5,
+        "pageRank": 0.11195970064663599,
+        "accessCount": 0
+      },
+      {
+        "id": "mem-openclaw-details-infrastructure--docker-contain",
+        "summary": "Infrastructure (Docker containers on Linux)",
+        "confidence": 0.5,
+        "pageRank": 0.10455934529494776,
+        "accessCount": 0
+      },
+      {
+        "id": "mem-MEMORY-ssh-access",
+        "summary": "SSH Access",
+        "confidence": 0.5,
+        "pageRank": 0.0958531306540649,
+        "accessCount": 0
+      },
+      {
+        "id": "mem-openclaw-details-channels",
+        "summary": "Channels",
+        "confidence": 0.5,
+        "pageRank": 0.0958531306540649,
+        "accessCount": 0
+      },
+      {
+        "id": "mem-MEMORY-mission-control-dashboard",
+        "summary": "Mission Control Dashboard",
+        "confidence": 0.5,
+        "pageRank": 0.0856106494782414,
+        "accessCount": 0
+      },
+      {
+        "id": "mem-openclaw-details-cron-job-model-naming--critica",
+        "summary": "Cron Job Model Naming (CRITICAL)",
+        "confidence": 0.5,
+        "pageRank": 0.0856106494782414,
+        "accessCount": 0
+      },
+      {
+        "id": "mem-MEMORY-common-issues-found",
+        "summary": "Common Issues Found",
+        "confidence": 0.5,
+        "pageRank": 0.07356061137724787,
+        "accessCount": 0
+      },
+      {
+        "id": "mem-openclaw-details-tool-permission-groups",
+        "summary": "Tool Permission Groups",
+        "confidence": 0.5,
+        "pageRank": 0.07356061137724787,
+        "accessCount": 0
+      },
+      {
+        "id": "mem-MEMORY-agents",
+        "summary": "Agents",
+        "confidence": 0.5,
+        "pageRank": 0.05938407163463863,
+        "accessCount": 0
+      },
+      {
+        "id": "mem-openclaw-details-auth-providers-configured",
+        "summary": "Auth Providers Configured",
+        "confidence": 0.5,
+        "pageRank": 0.05938407163463863,
+        "accessCount": 0
+      }
+    ]
+  },
+  {
+    "timestamp": 1776363600848,
+    "nodes": 15,
+    "edges": 12,
+    "pageRankSum": 0.9999999999999999,
+    "confidences": [
+      0.5,
+      0.5,
+      0.5,
+      0.5,
+      0.5,
+      0.5,
+      0.5,
+      0.5,
+      0.5,
+      0.5,
+      0.5,
+      0.5,
+      0.5,
+      0.5,
+      0.5
+    ],
+    "accessCounts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "topPatterns": [
+      {
+        "id": "mem-openclaw-details-troubleshooting-checklist",
+        "summary": "Troubleshooting Checklist",
+        "confidence": 0.5,
+        "pageRank": 0.11195970064663599,
+        "accessCount": 0
+      },
+      {
+        "id": "mem-openclaw-details-infrastructure--docker-contain",
+        "summary": "Infrastructure (Docker containers on Linux)",
+        "confidence": 0.5,
+        "pageRank": 0.10455934529494776,
+        "accessCount": 0
+      },
+      {
+        "id": "mem-MEMORY-ssh-access",
+        "summary": "SSH Access",
+        "confidence": 0.5,
+        "pageRank": 0.0958531306540649,
+        "accessCount": 0
+      },
+      {
+        "id": "mem-openclaw-details-channels",
+        "summary": "Channels",
+        "confidence": 0.5,
+        "pageRank": 0.0958531306540649,
+        "accessCount": 0
+      },
+      {
+        "id": "mem-MEMORY-mission-control-dashboard",
+        "summary": "Mission Control Dashboard",
+        "confidence": 0.5,
+        "pageRank": 0.0856106494782414,
+        "accessCount": 0
+      },
+      {
+        "id": "mem-openclaw-details-cron-job-model-naming--critica",
+        "summary": "Cron Job Model Naming (CRITICAL)",
+        "confidence": 0.5,
+        "pageRank": 0.0856106494782414,
+        "accessCount": 0
+      },
+      {
+        "id": "mem-MEMORY-common-issues-found",
+        "summary": "Common Issues Found",
+        "confidence": 0.5,
+        "pageRank": 0.07356061137724787,
+        "accessCount": 0
+      },
+      {
+        "id": "mem-openclaw-details-tool-permission-groups",
+        "summary": "Tool Permission Groups",
+        "confidence": 0.5,
+        "pageRank": 0.07356061137724787,
+        "accessCount": 0
+      },
+      {
+        "id": "mem-MEMORY-agents",
+        "summary": "Agents",
+        "confidence": 0.5,
+        "pageRank": 0.05938407163463863,
+        "accessCount": 0
+      },
+      {
+        "id": "mem-openclaw-details-auth-providers-configured",
+        "summary": "Auth Providers Configured",
+        "confidence": 0.5,
+        "pageRank": 0.05938407163463863,
+        "accessCount": 0
+      }
+    ]
+  },
+  {
+    "timestamp": 1776363610304,
+    "nodes": 15,
+    "edges": 12,
+    "pageRankSum": 0.9999999999999999,
+    "confidences": [
+      0.5,
+      0.5,
+      0.5,
+      0.5,
+      0.5,
+      0.5,
+      0.5,
+      0.5,
+      0.5,
+      0.5,
+      0.5,
+      0.5,
+      0.5,
+      0.5,
+      0.5
+    ],
+    "accessCounts": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "topPatterns": [
+      {
+        "id": "mem-openclaw-details-troubleshooting-checklist",
+        "summary": "Troubleshooting Checklist",
+        "confidence": 0.5,
+        "pageRank": 0.11195970064663599,
+        "accessCount": 0
+      },
+      {
+        "id": "mem-openclaw-details-infrastructure--docker-contain",
+        "summary": "Infrastructure (Docker containers on Linux)",
+        "confidence": 0.5,
+        "pageRank": 0.10455934529494776,
+        "accessCount": 0
+      },
+      {
+        "id": "mem-MEMORY-ssh-access",
+        "summary": "SSH Access",
+        "confidence": 0.5,
+        "pageRank": 0.0958531306540649,
+        "accessCount": 0
+      },
+      {
+        "id": "mem-openclaw-details-channels",
+        "summary": "Channels",
+        "confidence": 0.5,
+        "pageRank": 0.0958531306540649,
+        "accessCount": 0
+      },
+      {
+        "id": "mem-MEMORY-mission-control-dashboard",
+        "summary": "Mission Control Dashboard",
+        "confidence": 0.5,
+        "pageRank": 0.0856106494782414,
+        "accessCount": 0
+      },
+      {
+        "id": "mem-openclaw-details-cron-job-model-naming--critica",
+        "summary": "Cron Job Model Naming (CRITICAL)",
+        "confidence": 0.5,
+        "pageRank": 0.0856106494782414,
+        "accessCount": 0
+      },
+      {
+        "id": "mem-MEMORY-common-issues-found",
+        "summary": "Common Issues Found",
+        "confidence": 0.5,
+        "pageRank": 0.07356061137724787,
+        "accessCount": 0
+      },
+      {
+        "id": "mem-openclaw-details-tool-permission-groups",
+        "summary": "Tool Permission Groups",
+        "confidence": 0.5,
+        "pageRank": 0.07356061137724787,
+        "accessCount": 0
+      },
+      {
+        "id": "mem-MEMORY-agents",
+        "summary": "Agents",
+        "confidence": 0.5,
+        "pageRank": 0.05938407163463863,
+        "accessCount": 0
+      },
+      {
+        "id": "mem-openclaw-details-auth-providers-configured",
+        "summary": "Auth Providers Configured",
+        "confidence": 0.5,
+        "pageRank": 0.05938407163463863,
+        "accessCount": 0
+      }
+    ]
+  }
+]

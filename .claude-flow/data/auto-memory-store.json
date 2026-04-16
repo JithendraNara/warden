@@ -1,0 +1,197 @@
+[
+  {
+    "id": "mem-MEMORY-openclaw-architecture",
+    "key": "openclaw-architecture",
+    "content": "- Self-hosted multi-agent AI platform on Debian Linux server at 192.168.0.78\n- Connected to Mac via SSH tunnels (18789->18790, 18790->18790)\n- Gateway runs as systemd service (`openclaw-gateway.service`)\n- Version: 2026.2.9 (installed via ~/.npm-global, NOT system npm)\n- See [openclaw-details.md](openclaw-details.md) for full architecture notes",
+    "summary": "OpenClaw Architecture",
+    "namespace": "core",
+    "type": "semantic",
+    "metadata": {
+      "sourceFile": "/Users/jithendranara/.claude/projects/-Users-jithendranara-Documents-DA-Resume/memory/MEMORY.md",
+      "bootstrapped": true
+    },
+    "createdAt": 1776362929711
+  },
+  {
+    "id": "mem-MEMORY-key-file-locations--on-linux-s",
+    "key": "key-file-locations-on-linux-server-via-ssh-",
+    "content": "- Main config: `/home/openclaw/.openclaw/openclaw.json`\n- Cron jobs: `/home/openclaw/.openclaw/cron/jobs.json`\n- Agent auth: `/home/openclaw/.openclaw/agents/{agentId}/agent/auth-profiles.json`\n- Agent workspaces: `/home/openclaw/.openclaw/workspace/{agentName}/`\n- Workspace files: SOUL.md, TOOLS.md, AGENTS.md, IDENTITY.md, BOOT.md, MEMORY.md, HEARTBEAT.md",
+    "summary": "Key File Locations (on Linux server via SSH)",
+    "namespace": "core",
+    "type": "semantic",
+    "metadata": {
+      "sourceFile": "/Users/jithendranara/.claude/projects/-Users-jithendranara-Documents-DA-Resume/memory/MEMORY.md",
+      "bootstrapped": true
+    },
+    "createdAt": 1776362929711
+  },
+  {
+    "id": "mem-MEMORY-agents",
+    "key": "agents",
+    "content": "Atlas (WhatsApp-facing, chief of staff), Forge (builder), Frontend, Designer, QA, Minerva (research)",
+    "summary": "Agents",
+    "namespace": "core",
+    "type": "semantic",
+    "metadata": {
+      "sourceFile": "/Users/jithendranara/.claude/projects/-Users-jithendranara-Documents-DA-Resume/memory/MEMORY.md",
+      "bootstrapped": true
+    },
+    "createdAt": 1776362929711
+  },
+  {
+    "id": "mem-MEMORY-common-issues-found",
+    "key": "common-issues-found",
+    "content": "- **Cron model routing bug**: Bare model names get prefixed with agent's primary provider. Always use fully-qualified: `google-gemini-cli/gemini-2.5-flash`, NOT `gemini-2.5-flash`\n- **Auth profile errors**: Check `usageStats.errorCount` and `cooldownUntil` fields - reset to 0/remove when updating tokens\n- **Atlas permissions**: Was too restricted. Now has full exec, fs, web, messaging, sessions access\n- **Kimi/Moonshot**: Keys consistently return 401. User needs to verify at Moonshot console.\n- ",
+    "summary": "Common Issues Found",
+    "namespace": "core",
+    "type": "semantic",
+    "metadata": {
+      "sourceFile": "/Users/jithendranara/.claude/projects/-Users-jithendranara-Documents-DA-Resume/memory/MEMORY.md",
+      "bootstrapped": true
+    },
+    "createdAt": 1776362929711
+  },
+  {
+    "id": "mem-MEMORY-mission-control-dashboard",
+    "key": "mission-control-dashboard",
+    "content": "- Location: `/Users/jithendranara/Documents/New project/mission-control/`\n- Monorepo: apps/server (Fastify port 5178) + apps/web (React 19 + Vite)\n- LaunchAgent: `~/Library/LaunchAgents/ai.openclaw.mission-control.plist`\n- 4300-line monolith App.tsx - functional but could benefit from componentization",
+    "summary": "Mission Control Dashboard",
+    "namespace": "core",
+    "type": "semantic",
+    "metadata": {
+      "sourceFile": "/Users/jithendranara/.claude/projects/-Users-jithendranara-Documents-DA-Resume/memory/MEMORY.md",
+      "bootstrapped": true
+    },
+    "createdAt": 1776362929711
+  },
+  {
+    "id": "mem-MEMORY-ssh-access",
+    "key": "ssh-access",
+    "content": "- `ssh openclaw@192.168.0.78` (via key at ~/.ssh/openclaw_server)\n- Gateway config: `ws://127.0.0.1:18789` (tunneled)",
+    "summary": "SSH Access",
+    "namespace": "core",
+    "type": "semantic",
+    "metadata": {
+      "sourceFile": "/Users/jithendranara/.claude/projects/-Users-jithendranara-Documents-DA-Resume/memory/MEMORY.md",
+      "bootstrapped": true
+    },
+    "createdAt": 1776362929711
+  },
+  {
+    "id": "mem-openclaw-details-system-overview",
+    "key": "system-overview",
+    "content": "- Platform: Debian Linux on 192.168.0.78 (home network)\n- User: `openclaw` on Linux\n- Mac connection: SSH tunnels (18789, 18790)\n- Gateway: systemd service `openclaw-gateway.service`\n- Version tracking: `~/.npm-global` has the actual binary, NOT system npm at `/usr/lib`",
+    "summary": "System Overview",
+    "namespace": "openclaw-details",
+    "type": "semantic",
+    "metadata": {
+      "sourceFile": "/Users/jithendranara/.claude/projects/-Users-jithendranara-Documents-DA-Resume/memory/openclaw-details.md",
+      "bootstrapped": true
+    },
+    "createdAt": 1776362929711
+  },
+  {
+    "id": "mem-openclaw-details-agent-roster--7-total-",
+    "key": "agent-roster-7-total-",
+    "content": "| Agent | Role | Primary Provider |\n|-------|------|-----------------|\n| Atlas | WhatsApp-facing chief of staff | anthropic |\n| Forge | Builder/developer | anthropic |\n| Frontend | Frontend specialist | anthropic |\n| Designer | Design specialist | anthropic |\n| QA | Quality assurance | anthropic |\n| Minerva | Research/analysis | anthropic |\n| main | Workspace agent | anthropic |",
+    "summary": "Agent Roster (7 total)",
+    "namespace": "openclaw-details",
+    "type": "semantic",
+    "metadata": {
+      "sourceFile": "/Users/jithendranara/.claude/projects/-Users-jithendranara-Documents-DA-Resume/memory/openclaw-details.md",
+      "bootstrapped": true
+    },
+    "createdAt": 1776362929711
+  },
+  {
+    "id": "mem-openclaw-details-auth-providers-configured",
+    "key": "auth-providers-configured",
+    "content": "- **Anthropic**: setup-token (sk-ant-oat01 format), NOT standard API key\n- **GitHub Copilot**: Bearer token\n- **Google Gemini CLI**: OAuth (access + refresh tokens)\n- **Kimi/Moonshot Coding**: API key (persistently 401 as of 2025-02-12)\n- **xAI/Grok**: API key in openclaw.json (tested working)\n- **Brave Search**: API key in openclaw.json",
+    "summary": "Auth Providers Configured",
+    "namespace": "openclaw-details",
+    "type": "semantic",
+    "metadata": {
+      "sourceFile": "/Users/jithendranara/.claude/projects/-Users-jithendranara-Documents-DA-Resume/memory/openclaw-details.md",
+      "bootstrapped": true
+    },
+    "createdAt": 1776362929711
+  },
+  {
+    "id": "mem-openclaw-details-tool-permission-groups",
+    "key": "tool-permission-groups",
+    "content": "- `group:runtime`, `group:fs`, `group:web`, `group:sessions`, `group:messaging`\n- Individual: `exec`, `bash`, `process`, `browser`, `canvas`, `nodes`, `gateway`",
+    "summary": "Tool Permission Groups",
+    "namespace": "openclaw-details",
+    "type": "semantic",
+    "metadata": {
+      "sourceFile": "/Users/jithendranara/.claude/projects/-Users-jithendranara-Documents-DA-Resume/memory/openclaw-details.md",
+      "bootstrapped": true
+    },
+    "createdAt": 1776362929711
+  },
+  {
+    "id": "mem-openclaw-details-cron-job-model-naming--critica",
+    "key": "cron-job-model-naming-critical-",
+    "content": "Always use fully-qualified format: `{provider}/{model}`\n- `google-gemini-cli/gemini-2.5-flash`\n- `google-gemini-cli/gemini-2.5-pro`\n- NEVER use bare model names - they get prefixed with agent's primary provider",
+    "summary": "Cron Job Model Naming (CRITICAL)",
+    "namespace": "openclaw-details",
+    "type": "semantic",
+    "metadata": {
+      "sourceFile": "/Users/jithendranara/.claude/projects/-Users-jithendranara-Documents-DA-Resume/memory/openclaw-details.md",
+      "bootstrapped": true
+    },
+    "createdAt": 1776362929711
+  },
+  {
+    "id": "mem-openclaw-details-channels",
+    "key": "channels",
+    "content": "- WhatsApp (Atlas is the primary contact)\n- Telegram",
+    "summary": "Channels",
+    "namespace": "openclaw-details",
+    "type": "semantic",
+    "metadata": {
+      "sourceFile": "/Users/jithendranara/.claude/projects/-Users-jithendranara-Documents-DA-Resume/memory/openclaw-details.md",
+      "bootstrapped": true
+    },
+    "createdAt": 1776362929711
+  },
+  {
+    "id": "mem-openclaw-details-infrastructure--docker-contain",
+    "key": "infrastructure-docker-containers-on-linux-",
+    "content": "- PostgreSQL, Redis, ChromaDB, Ollama (5 models), ~25 containers total\n- Resources: 7.6GB RAM, typically ~4.3GB used, ~6% disk",
+    "summary": "Infrastructure (Docker containers on Linux)",
+    "namespace": "openclaw-details",
+    "type": "semantic",
+    "metadata": {
+      "sourceFile": "/Users/jithendranara/.claude/projects/-Users-jithendranara-Documents-DA-Resume/memory/openclaw-details.md",
+      "bootstrapped": true
+    },
+    "createdAt": 1776362929711
+  },
+  {
+    "id": "mem-openclaw-details-troubleshooting-checklist",
+    "key": "troubleshooting-checklist",
+    "content": "1. Check `journalctl -u openclaw-gateway.service` for gateway errors\n2. Check auth-profiles.json for errorCount > 0 and cooldownUntil\n3. Check cron jobs.json for consecutiveErrors > 0\n4. Verify model names are fully-qualified in cron jobs\n5. Check workspace dirs have all required files (SOUL, TOOLS, AGENTS, IDENTITY, BOOT, MEMORY)\n6. Config permissions should be 600",
+    "summary": "Troubleshooting Checklist",
+    "namespace": "openclaw-details",
+    "type": "semantic",
+    "metadata": {
+      "sourceFile": "/Users/jithendranara/.claude/projects/-Users-jithendranara-Documents-DA-Resume/memory/openclaw-details.md",
+      "bootstrapped": true
+    },
+    "createdAt": 1776362929711
+  },
+  {
+    "id": "mem-feedback_ui_approach----",
+    "key": "-",
+    "content": "name: UI must be chat-first, not dashboard\ndescription: User strongly dislikes traditional sidebar+dashboard layouts. Wants AI chat agent interface like ChatGPT/Claude, not boxed-up panels.\ntype: feedback\n---\n\nNEVER build traditional dashboard UIs with left sidebar navigation and content panels crammed into grids. User hates this approach.\n\n**Why:** User sees this as outdated, cramped, and lazy. They want modern AI-first interfaces where the chat/agent IS the product, not a sidebar panel.\n\n**How",
+    "summary": "---",
+    "namespace": "feedback_ui_approach",
+    "type": "semantic",
+    "metadata": {
+      "sourceFile": "/Users/jithendranara/.claude/projects/-Users-jithendranara-Documents-GitHub-tax-navigator/memory/feedback_ui_approach.md",
+      "bootstrapped": true
+    },
+    "createdAt": 1776362929713
+  }
+]

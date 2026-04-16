@@ -1,0 +1,14 @@
+{
+  "id": "session-1776363548505",
+  "startedAt": "2026-04-16T18:19:08.505Z",
+  "cwd": "/Users/jithendranara/projects/repo-refresh/warden",
+  "context": {},
+  "metrics": {
+    "edits": 0,
+    "commands": 0,
+    "tasks": 0,
+    "errors": 0
+  },
+  "endedAt": "2026-04-16T18:19:16.584Z",
+  "duration": 8079
+}

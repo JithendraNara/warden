@@ -510,10 +510,12 @@ class ClaudeAgentThinker:
         model: str,
         base_system_prompt: str,
         tool_catalog: dict[str, str],
+        min_tool_calls: int = 1,
     ) -> None:
         self._model = model
         self._base_prompt = base_system_prompt
         self._tool_catalog = tool_catalog
+        self._min_tool_calls = min_tool_calls
 
     def think(self, *, goal: str, context: str, iteration: int) -> Thought:
         sdk = importlib.import_module("claude_agent_sdk")
@@ -542,10 +544,38 @@ class ClaudeAgentThinker:
         tool_lines = "\n".join(
             f"- {name}: {doc}" for name, doc in sorted(self._tool_catalog.items())
         )
+
+        observations_so_far = _count_tool_results_in_context(context)
+        must_gather = observations_so_far < self._min_tool_calls and iteration <= 3
+
+        discipline = (
+            "REQUIRED: You have not yet gathered enough evidence. You MUST"
+            " emit a tool_call this turn and set final_result to null. Do"
+            " not guess or summarise without tool output."
+            if must_gather
+            else "You may emit a final_result this turn if the evidence is"
+            " sufficient. Otherwise call another tool."
+        )
+
         return textwrap.dedent(
             f"""
-            You are inside warden's bounded agent loop (iteration {iteration}).
-            Output a single JSON object, nothing else.
+            You are the planner for warden, an autonomous maintainer agent.
+
+            IMPORTANT: You are NOT executing code directly. Your ONLY job
+            is to emit a JSON plan. A separate Python orchestrator reads
+            your JSON and either executes the named virtual tool against
+            real services (GitHub REST, sandboxed filesystem, etc.) or
+            verifies your final result against a schema.
+
+            The tool names listed below are VIRTUAL NAMES understood by
+            the warden orchestrator. They are NOT Claude Agent SDK
+            built-in tools. You MUST use exactly these names. The
+            orchestrator is guaranteed to execute them and return the
+            tool_result to you on the next turn.
+
+            Output format (iteration {iteration}):
+            Emit a single JSON object, nothing else. No prose before or
+            after. No markdown code fences.
 
             Schema:
             {{
@@ -554,19 +584,35 @@ class ClaudeAgentThinker:
               "final_result": {{...}} OR null
             }}
 
-            At each turn, choose EITHER to call one tool or to emit a final
-            result. Never fabricate tool output.
+            Exactly ONE of tool_call / final_result must be non-null.
+
+            Policy:
+            - Treat the virtual tools as real. They ARE real — they run
+              outside the SDK via the warden Python orchestrator.
+            - Always gather evidence via tools before emitting a final
+              result. Do not claim the tools are unavailable.
+            - Never invent tool output or paste fake JSON into commentary.
+            - If you call a tool, the next turn will receive a truncated
+              "tool_result" entry in the Context so you can reason on it.
+            - {discipline}
 
             Goal:
             {goal}
 
-            Tools available:
+            Virtual tools dispatched by the warden orchestrator (use ONLY
+            these names; assume they work):
             {tool_lines or "- (none)"}
+
+            Observations gathered so far: {observations_so_far}
 
             Context so far:
             {context}
             """
         ).strip()
+
+
+def _count_tool_results_in_context(context: str) -> int:
+    return sum(1 for line in context.splitlines() if "tool_result" in line)
 
 
 def _parse_thought_json(raw: str) -> Thought:

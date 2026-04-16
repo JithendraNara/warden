@@ -100,6 +100,7 @@ def run_agentic_triage(
                 "list_similar_issues": "Search the repository for related issues.",
                 "get_repo_context": "Fetch repo-level summary and topics.",
             },
+            min_tool_calls=1,
         )
     else:
         thinker = RuleBasedTriageThinker(repo=repo)

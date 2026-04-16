@@ -1,9 +1,14 @@
 """Live integration test against MiniMax M2.7 via the Anthropic endpoint.
 
 The test is skipped unless ``WARDEN_LIVE_TEST=1`` is set and
-``ANTHROPIC_AUTH_TOKEN`` is present. It drives the Claude Agent SDK
-through the warden agent loop using a minimal ask so it stays
-cheap on token usage while still proving end-to-end connectivity.
+``ANTHROPIC_AUTH_TOKEN`` is present. It drives the full agent loop
+through :class:`ClaudeAgentThinker` against the MiniMax
+Anthropic-compatible endpoint and asserts that the loop:
+
+- reached a verified final result,
+- called at least one tool (so it exercised the real tool chain, not
+  a one-shot answer),
+- produced a structured payload matching the triage schema.
 """
 
 from __future__ import annotations
@@ -37,6 +42,11 @@ def test_live_minimax_triage(tmp_path: Path) -> None:
     except ImportError:
         pytest.skip("claude_agent_sdk not installed; skipping live test.")
 
+    # NOTE: we populate the adapter with a real issue body and similar
+    # issues, but the prompt built by build_triage_prompt includes the
+    # body by design. The thinker prompt additionally enforces a
+    # minimum tool-call count so the model exercises the tool chain
+    # (list_similar_issues, get_repo_context, etc.).
     adapter = FakeGitHubAdapter(
         issues=[
             (
@@ -57,7 +67,23 @@ def test_live_minimax_triage(tmp_path: Path) -> None:
             )
         ],
         comments=[("example/demo", 1, [])],
-        similar=[("example/demo", [])],
+        similar=[
+            (
+                "example/demo",
+                [
+                    GitHubIssue(
+                        number=11,
+                        title="older startup config crash",
+                        body="",
+                        state="closed",
+                        labels=("bug",),
+                        comments=0,
+                        author="other",
+                        url="https://example/11",
+                    )
+                ],
+            )
+        ],
         repos=[
             (
                 "example/demo",
@@ -91,8 +117,25 @@ def test_live_minimax_triage(tmp_path: Path) -> None:
         use_live_model=True,
     )
 
-    assert result.outcome.status in {"verified", "iteration_budget_exhausted"}
-    # Even when the model stops early the loop must have called at least
-    # one tool and recorded a trajectory.
-    assert result.outcome.tool_calls >= 0
-    assert result.outcome.iterations >= 1
+    outcome = result.outcome
+    # The model must actually use the tool chain, not answer in one
+    # shot. The ClaudeAgentThinker enforces this with its prompt
+    # discipline.
+    assert outcome.tool_calls >= 1, (
+        f"expected at least 1 tool call, got {outcome.tool_calls};"
+        f" trajectory={outcome.trajectory}"
+    )
+    assert outcome.status == "verified", (
+        f"expected verified status, got {outcome.status};"
+        f" reason={outcome.verification.reason() if outcome.verification else None}"
+    )
+    payload = outcome.result or {}
+    for key in (
+        "category",
+        "severity",
+        "priority",
+        "summary",
+        "recommended_labels",
+        "suggested_next_action",
+    ):
+        assert key in payload, f"triage payload missing key {key!r}: {payload}"
